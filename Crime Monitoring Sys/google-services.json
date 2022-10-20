@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "241843267091",
+    "firebase_url": "https://crime-monitoring-system-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "crime-monitoring-system",
+    "storage_bucket": "crime-monitoring-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241843267091:android:8e9afa011df9f41d1181e6",
+        "android_client_info": {
+          "package_name": "com.companyname.crime_monitoring_sys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241843267091-ppm112ebmlt1t4okbqsohccjgdhj1p5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.crime_monitoring_sys",
+            "certificate_hash": "a90a9e5ceedcb05e6754d57468ff77422b951519"
+          }
+        },
+        {
+          "client_id": "241843267091-5n6pulbmaaeh4r8pgm7c3b6m7serf3dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGKhcXmgmihYLjFD9IMx7Xh5RVb348eWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241843267091-5n6pulbmaaeh4r8pgm7c3b6m7serf3dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"
+            android:id="@+id/adminSosBackbtn"
+            android:tint="@color/m3_ref_palette_white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SOS Report"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/m3_ref_palette_white"
+            android:paddingRight="20dp"
+            />
+        </Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sosAdminRecycler"
+        />
+</LinearLayout>

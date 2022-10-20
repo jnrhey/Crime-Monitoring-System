@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:id="@+id/bannerImg"
+        android:layout_margin="50px"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_marginTop="250px"
+        android:layout_below="@id/bannerImg"
+        android:id="@+id/labelEmail"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"/>
+    <EditText
+        android:id="@+id/logEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/labelEmail"/>
+       <TextView
+        android:id="@+id/labelPassword"
+        android:layout_below="@+id/logEmail"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"/>
+    <EditText
+        android:id="@+id/logPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:inputType="textPassword"
+        app:passwordToggleEnabled="true"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/labelPassword"/>
+
+
+    <Button
+        android:id="@+id/buttonlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logPassword"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+    android:id="@+id/dontHave"
+     android:layout_width="wrap_content"
+     android:layout_height="30dp"
+     android:layout_below="@id/buttonlogin"
+     android:textAlignment="center"
+     android:padding="20px"
+     android:layout_centerInParent="true"
+        android:textStyle="italic"
+     android:layout_marginTop="30px"
+     android:text="Don't have an Account?" />
+    <TextView
+        android:id="@+id/RegisterAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/dontHave"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:padding="20px"
+        android:text="Register Here!" />
+</RelativeLayout>

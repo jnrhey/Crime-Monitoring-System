@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4CB4291-63F2-47D3-9B86-072296F3C164}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Crime_Monitoring_Sys</RootNamespace>
+    <AssemblyName>Crime Monitoring Sys</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\admin_activity.cs" />
+    <Compile Include="Activities\admin_complaint_records_activity.cs" />
+    <Compile Include="Activities\admin_home_fragment.cs" />
+    <Compile Include="Activities\admin_sos_records_activity.cs" />
+    <Compile Include="Activities\admin_trace_maps_activity.cs" />
+    <Compile Include="Activities\admin_user_fragment.cs" />
+    <Compile Include="Activities\ct_complaint_records_activity.cs" />
+    <Compile Include="Activities\ct_file_fragment.cs" />
+    <Compile Include="Activities\ct_home_fragment.cs" />
+    <Compile Include="Activities\ct_sos_records_activity.cs" />
+    <Compile Include="Activities\ct_user_fragment.cs" />
+    <Compile Include="Activities\login_activity.cs" />
+    <Compile Include="Activities\register_activity.cs" />
+    <Compile Include="Activities\touristp_ct_activity.cs" />
+    <Compile Include="Adapters\comp_ct_record_adapter.cs" />
+    <Compile Include="Adapters\com_admin_record_adapter.cs" />
+    <Compile Include="Adapters\sos_admin_records_adapter.cs" />
+    <Compile Include="Adapters\sos_ct_record_adapter.cs" />
+    <Compile Include="GetSet\comp_records_admin.cs" />
+    <Compile Include="GetSet\comp_records_ct.cs" />
+    <Compile Include="GetSet\sos_records_admin.cs" />
+    <Compile Include="GetSet\sos_records_ct.cs" />
+    <Compile Include="Helpers\AppDataHelper.cs" />
+    <Compile Include="Listeners\admin_comp_records_listeners.cs" />
+    <Compile Include="Listeners\admin_sos_records_listeners.cs" />
+    <Compile Include="Listeners\ct_comp_records_listeners.cs" />
+    <Compile Include="Listeners\ct_sos_records_listeners.cs" />
+    <Compile Include="Listeners\TaskListener.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\login_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ct_home_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Geocoding.Google">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.4.1.1" />
+    <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>121.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Database">
+      <Version>120.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps">
+      <Version>118.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\register_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\touristp_citizen_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_police_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="menu\nav_ct.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\drawable\document.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\nav_color_state.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ct_file_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ct_user_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mode_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\complaint_ct_records_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sos_ct_records_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\list_complaint_ct_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sos_list_ct_model.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\complaint_admin_record_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\list_complaint_admin_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sos_admin_records_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sos_list_admin_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="menu\nav_admin.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_user_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_maps_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_home_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sos_maps_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

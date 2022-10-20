@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    >
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+        app:cardElevation="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"    
+            android:background="@android:drawable/dialog_holo_light_frame"
+            >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:text="Name :"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lblName"/>
+
+            <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="complaint_user_name"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_toRightOf="@id/lblName"
+                 android:id="@+id/txtCompAdminUserName"
+                />
+
+                <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Complaint Type :"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/lblName"
+                 android:id="@+id/lblComAdminpType"
+                />
+            
+                <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="complaint_type"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/lblName"
+                android:layout_toRightOf="@id/lblComAdminpType"
+                 android:id="@+id/txtComAdminType"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Description :"  
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/lblComAdminpType"
+                android:id="@+id/lbllCompDesc"
+            />
+                  <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comp_description"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/txtComDescAdmin"
+                android:layout_toRightOf="@id/lbllCompDesc"
+                android:layout_below="@id/txtComAdminType"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submitted By :"
+                android:layout_marginLeft="20dp"
+                android:layout_above="@id/lblComAdminDescTime"
+                android:id="@+id/submitLbl"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user_sender"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/userSenderAdmin"
+                android:layout_toRightOf="@id/submitLbl"
+                android:layout_above="@id/txtCompAdminTime"
+                />
+            <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:text="Time Stamp :"
+                android:layout_marginLeft="20dp"
+                android:layout_above="@id/lblCompStat"
+                android:id="@+id/lblComAdminDescTime"/>
+            <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="complaint_timestamp"
+                 android:layout_marginLeft="5dp"
+                 android:layout_above="@id/txtCompAdminStatus"
+                 android:layout_toRightOf="@id/lblComAdminDescTime"
+                 android:id="@+id/txtCompAdminTime"
+                />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status :"
+                    android:id="@+id/lblCompStat"
+                    android:layout_marginLeft="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCompAdminStatus"
+                android:text="comp_status"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/lblCompStat"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update status"
+                android:id="@+id/btnUpdateCompStat"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_marginRight="10dp"
+                />
+
+     
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+  
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="100dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mode_portrait"
+            android:layout_centerInParent="true"
+            android:id="@+id/usrAvatar"
+            />
+       
+    </RelativeLayout> 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:gravity="center"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        android:text="First Name : "
+        android:layout_alignParentLeft="true"
+            android:id="@+id/labelNa"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+        android:text="user_first_name"
+        android:id="@+id/userAdminFirstNameLbl"
+    android:layout_alignParentRight="true"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        android:text="Last Name :"
+        android:layout_alignParentLeft="true"
+            android:layout_below="@id/labelNa"
+            android:id="@+id/labelLaNa"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+        android:text="user_last_name"
+        android:id="@+id/userAdminLastNameLbl"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/userAdminFirstNameLbl"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        android:text="Phone Number : "
+        android:layout_alignParentLeft="true"
+            android:id="@+id/labelPhoneNo"
+            android:layout_below="@id/labelLaNa"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+        android:text="user_phone_number"
+        android:id="@+id/userAdminPhoneNumberLbl"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/userAdminLastNameLbl"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        android:text="Email : "
+        android:layout_alignParentLeft="true"
+            android:id="@+id/labelUsrEmail"
+            android:layout_below="@id/labelPhoneNo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+        android:text="user_email"
+        android:id="@+id/userAdminEmailLbl"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/userAdminPhoneNumberLbl"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Role : "
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/labelUsrEmail"
+        android:layout_alignParentLeft="true"
+            android:id="@+id/labelUsrRole"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+        android:text="user_role"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/userAdminEmailLbl"
+        android:id="@+id/userAdminRoleLbl"
+        />
+
+    
+</RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="70dp"
+        android:id="@+id/btnAdminLogout"
+        android:textColor="@android:color/holo_red_light"
+        android:text="Logout"
+        />
+</LinearLayout>

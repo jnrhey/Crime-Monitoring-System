@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"       
+            android:background="@android:drawable/dialog_holo_light_frame"
+        
+            >
+            <TextView
+                android:id="@+id/labelCreateComplain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Complaint"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:layout_margin="20dp"
+                />
+
+        <ImageView
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+            android:id="@+id/complaintImg"
+            android:layout_below="@id/labelCreateComplain"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:src="@drawable/mode_portrait"
+            />
+             <TextView
+        android:layout_below="@id/complaintImg"
+        android:id="@+id/labelStr1"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complaint Name:"/>
+    <EditText
+        android:id="@+id/complaintName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" 
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/labelStr1"
+        android:hint="Complaint Name"
+            />
+                
+                <TextView
+        android:layout_below="@id/complaintName"
+        android:id="@+id/labelStr2"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complaint Description:"/>
+    <EditText
+        android:id="@+id/complaintDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" 
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/labelStr2"
+        android:hint="Description"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint Type :"
+            android:id="@+id/labelStrCompType"
+            android:layout_below="@id/complaintDesc"
+            android:padding="30px"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/spinnerType"
+        android:layout_below="@id/complaintDesc"
+        android:background="@drawable/abc_spinner_textfield_background_material"
+        android:layout_toRightOf="@id/labelStrCompType"
+                />
+        </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Complaint"
+        android:layout_gravity="center"
+        android:id="@+id/btnAddComplaint"
+        />
+
+</LinearLayout>

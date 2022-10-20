@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+      <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500px"
+                android:id="@+id/bannerImg"
+                android:layout_margin="20px"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/labelCreateString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Your Account"
+                android:layout_below="@id/bannerImg"
+                android:layout_centerInParent="true"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_marginTop="150px"
+                android:layout_below="@id/labelCreateString"
+                android:id="@+id/labelEmail"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:"/>
+            <EditText
+                android:id="@+id/regEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textEmailAddress"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelEmail"/>
+
+
+            <TextView
+                android:id="@+id/labelFirstName"
+                android:layout_below="@id/regEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30px"
+                android:text="First Name:"/>
+            <EditText
+                android:id="@+id/regFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelFirstName"/>
+            <TextView
+                android:id="@+id/labelLastName"
+                android:layout_below="@id/regFirstName"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name:"/>
+            <EditText
+                android:id="@+id/regLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelLastName"/>
+            <TextView
+                android:id="@+id/labelSpinnerRole"
+                android:layout_below="@id/regLastName"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Role:"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/spinnerRole"
+                android:layout_below="@id/labelSpinnerRole"
+                android:background="@drawable/abc_spinner_textfield_background_material"
+                />
+            <TextView
+                android:id="@+id/labelNumber"
+                android:layout_below="@id/spinnerRole"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number:"/>
+            <EditText
+                android:id="@+id/regNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:maxLength="11"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelNumber"/>
+
+            <TextView
+                android:id="@id/labelPassword"
+                android:layout_below="@id/regNumber"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password:"/>
+            <EditText
+                android:id="@+id/regPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textPassword"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelPassword"/>
+
+            <TextView
+                android:id="@+id/labelConPassword"
+                android:layout_below="@id/regPassword"
+                android:padding="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password:"/>
+            <EditText
+                android:id="@+id/regConPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textPassword"
+                android:background="@android:drawable/editbox_background"
+                android:layout_below="@id/labelConPassword"/>
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regConPassword"
+                android:text="Register"
+                android:layout_centerInParent="true"
+        />
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/btnRegister"
+                android:textAlignment="center"
+                android:padding="30px"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30px"
+                android:text="Login" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
