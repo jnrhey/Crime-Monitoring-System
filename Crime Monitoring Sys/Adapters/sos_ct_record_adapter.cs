@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using Crime_Monitoring_Sys.GetSet;
 using AndroidX.RecyclerView.Widget;
+using Android.Graphics;
 
 namespace Crime_Monitoring_Sys.Adapters
 {
@@ -38,9 +39,18 @@ namespace Crime_Monitoring_Sys.Adapters
             holder.name.Text = sos_Records[position].sos_name;
             holder.ltlng.Text = sos_Records[position].sos_latitude + " , " + sos_Records[position].sos_longitude;
             holder.timeStamp.Text = sos_Records[position].time_stamp;
-            holder.stats.Text = sos_Records[position].sos_status;
-            
-            
+            if (sos_Records[position].sos_status == "Active")
+            {
+                holder.stats.Text = "Active";
+                holder.stats.SetTextColor(Color.ParseColor("#FFBF00"));
+            }
+            else if (sos_Records[position].sos_status != "Active")
+            {
+                holder.stats.Text = "Solved";
+                holder.stats.SetTextColor(Color.ParseColor("#51A944"));
+            }
+
+
         }
 
         public override int ItemCount => sos_Records.Count;

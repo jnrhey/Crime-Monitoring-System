@@ -41,16 +41,21 @@ namespace Crime_Monitoring_Sys.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.admin_maps_layout);
-            back = (ImageView)FindViewById(Resource.Id)
-
+            back = (ImageView)FindViewById(Resource.Id.adminMapBackbtn);
+            back.Click += Back_Click;
             SetUpMap();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.OnBackPressed();
         }
 
         private void SetUpMap()
         {
             if(GMAp == null)
             {
-                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.trackGMaps).GetMapAsync(this);
+                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.trackGMaps).GetMapAsync(this); 
             }
         }
     }

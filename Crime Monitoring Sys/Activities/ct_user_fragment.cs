@@ -17,6 +17,8 @@ namespace Crime_Monitoring_Sys.Activities
 {
     public class ct_user_fragment : AndroidX.Fragment.App.Fragment, IValueEventListener
     {
+        ISharedPreferences session = Application.Context.GetSharedPreferences("_session", FileCreationMode.Private);
+        ISharedPreferencesEditor editor;
         View view;
         TextView usrFname, usrLname, usrPhone, usrEmail, usrRole;
         Button logout;
@@ -69,6 +71,9 @@ namespace Crime_Monitoring_Sys.Activities
         {
             auth.SignOut();
             Activity.Finish();
+            editor = session.Edit();
+            editor.PutString("session", "false");
+            editor.Apply();
             Intent i = new Intent(Application.Context, Java.Lang.Class.FromType(typeof(login_activity)));
             StartActivity(i);
             

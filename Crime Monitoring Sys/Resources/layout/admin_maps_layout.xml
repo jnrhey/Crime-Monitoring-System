@@ -31,7 +31,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.google.android.gms.maps.MapFragment"
-        android:id="@+id/trackGMaps"/>
+        android:id="@+id/trackGMaps"
+        class="com.google.android.gms.maps.MapFragment" />
   
 </LinearLayout>

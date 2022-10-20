@@ -18,6 +18,8 @@ namespace Crime_Monitoring_Sys.Activities
     [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class login_activity : Activity , IValueEventListener
     {
+        ISharedPreferences session = Application.Context.GetSharedPreferences("_session", FileCreationMode.Private);
+        ISharedPreferencesEditor editor;
         Button btnOk;
         TextView btnRegister;
         EditText userEmail, userPassword;
@@ -33,6 +35,29 @@ namespace Crime_Monitoring_Sys.Activities
             userPassword = (EditText)FindViewById(Resource.Id.logPassword);
             btnOk.Click += BtnOk_Click;
             btnRegister.Click += BtnRegister_Click;
+
+            if(session.GetString("session","") == "true" && session.GetString("accRole","") == "Citizen")
+            {
+                StartActivity(typeof(touristp_ct_activity));
+                Finish();
+            }else if (session.GetString("session", "") == "true" && session.GetString("accRole", "") == "Tourist")
+            {
+                StartActivity(typeof(touristp_ct_activity));
+                Finish();
+            }else if (session.GetString("session", "") == "true" && session.GetString("accRole", "") == "Admin")
+            {
+                StartActivity(typeof(admin_activity));
+                Finish();
+            }
+            else if (session.GetString("session", "") == "true" && session.GetString("accRole", "") == "Police")
+            {
+                StartActivity(typeof(admin_activity));
+                Finish();
+            }
+            else
+            {
+                //session closed
+            }
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
@@ -93,14 +118,24 @@ namespace Crime_Monitoring_Sys.Activities
 
         public void OnDataChange(DataSnapshot snapshot)
         {
+
             accRole = snapshot.Child("account_role").Value.ToString();           
             if(accRole == "Citizen" || accRole == "Tourist")
             {
-                Console.WriteLine(accRole);
+                editor = session.Edit();
+                editor.PutString("usrID", auth.Uid);
+                editor.PutString("session", "true");
+                editor.PutString("accRole" , accRole);
+                editor.Apply();
                 StartActivity(typeof(touristp_ct_activity));
                 Finish();
             }else if (accRole == "Admin" || accRole == "Police")
             {
+                editor = session.Edit();
+                editor.PutString("usrID", auth.Uid);
+                editor.PutString("session", "true");
+                editor.PutString("accRole", accRole);
+                editor.Apply();
                 StartActivity(typeof(admin_activity));
                 Finish();
             }          

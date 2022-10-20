@@ -69,7 +69,6 @@ namespace Crime_Monitoring_Sys.Activities
         private void Back_Click(object sender, EventArgs e)
         {
             this.OnBackPressed();
-            Finish();
         }
 
      

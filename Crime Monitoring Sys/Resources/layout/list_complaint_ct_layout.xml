@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="220dp"
+    android:layout_height="240dp"
     >
 
    <androidx.cardview.widget.CardView
@@ -14,7 +14,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"    
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/abc_btn_colored_borderless_text_material"
             android:background="@android:drawable/dialog_holo_light_frame"
             >
            <TextView
@@ -23,6 +24,7 @@
                 android:text="Name :"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/lblName"/>
@@ -31,6 +33,7 @@
                  android:layout_height="wrap_content"
                  android:text="complaint_user_name"
                  android:textSize="20dp"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="5dp"
                  android:layout_marginTop="20dp"
                  android:layout_toRightOf="@id/lblName"
@@ -41,6 +44,7 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="Complaint Type :"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="20dp"
                 android:layout_below="@id/lblName"
                  android:id="@+id/lblCompType"
@@ -50,6 +54,7 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="complaint_type"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@id/lblName"
                 android:layout_toRightOf="@id/lblCompType"
@@ -61,6 +66,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                 android:text="Complaint Description :"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="20dp"
                 android:layout_below="@id/lblCompType"
                 android:id="@+id/lblComDesc"/>
@@ -68,9 +74,11 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="complaint_description"
-                 android:layout_marginLeft="5dp"
-                 android:layout_below="@id/txtComType"
-                 android:layout_toRightOf="@id/lblComDesc"
+                android:textColor="@android:color/white"
+                 android:layout_marginLeft="20dp"
+                 android:layout_below="@id/lblComDesc"
+android:layout_alignParentLeft="true"
+                
                  android:id="@+id/txtCtCompDesc"
                 />
                 
@@ -78,6 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Time Stamp :"
+                android:textColor="@android:color/white"
                 android:id="@+id/lblcompCtTimeStamp"
                 android:layout_marginLeft="20dp"
                 android:layout_above="@id/lblCompStat"
@@ -87,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="time_stamp"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="5dp"
                 android:id="@+id/compCtTimeStamp"
                 android:layout_toRightOf="@id/lblcompCtTimeStamp"
@@ -98,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:text="Status :"
                     android:id="@+id/lblCompStat"
+                android:textColor="@android:color/white"
                     android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
                     android:layout_alignParentBottom="true"
@@ -108,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtCompStatus"
                 android:text="comp_status"
+                android:textColor="@android:color/white"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="10dp"
@@ -123,8 +135,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:textColor="@android:color/holo_red_light"
+                android:backgroundTint="@color/colorPrimary"
                 android:padding="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
                 />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

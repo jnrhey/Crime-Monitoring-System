@@ -63,7 +63,6 @@ namespace Crime_Monitoring_Sys.Activities
             intent.PutExtra("latitude", records[e.Position].sos_latitude.ToString());
             intent.PutExtra("longitude", records[e.Position].sos_longitude.ToString());
             StartActivity(intent);
-            Finish();
         }
 
         private void Adapter_updateClick(object sender, sos_admin_records_adapterClickEventArgs e)
@@ -91,7 +90,6 @@ namespace Crime_Monitoring_Sys.Activities
         private void Back_Click(object sender, EventArgs e)
         {
             this.OnBackPressed();
-            Finish();
         }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="220dp"
     tools:context=".sos_activity"
     >
 
@@ -17,6 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" 
+            android:backgroundTint="@color/abc_btn_colored_borderless_text_material"
             android:background="@android:drawable/dialog_holo_light_frame"
             >
            <TextView
@@ -24,6 +25,7 @@
                android:layout_height="wrap_content"
                 android:text="Name :"
                 android:textSize="20dp"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
@@ -32,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sos_user_name"
+                android:textColor="@android:color/white"
                 android:textSize="20dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
@@ -42,6 +45,7 @@
                 <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                  android:text="Coordinates :"
                 android:layout_marginLeft="20dp"
                 android:layout_below="@id/lblName"
@@ -51,6 +55,7 @@
                 <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                  android:text="address_of_user"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@id/lblName"
@@ -62,6 +67,7 @@
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                 android:id="@+id/sosAdminTime"
                 android:text="Time Stamp :"
                 android:layout_marginLeft="20dp"
@@ -70,6 +76,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                     android:id="@+id/txtSosAdminTime"
                  android:text="time_stamp"
                 android:layout_marginLeft="5dp"
@@ -79,6 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                     android:text="Status :"
                     android:id="@+id/lblSosAdminStat"
                     android:layout_marginLeft="20dp"
@@ -90,6 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtSosAdminStatus"
+                android:textColor="@android:color/white"
                 android:text="comp_status"
                 android:layout_marginLeft="5dp"
                 android:textStyle="bold"
@@ -104,10 +113,12 @@
                 android:text="update sos"
                 android:id="@+id/btnUpdateSos"
                 android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
                 android:layout_alignParentRight="true"
                 android:padding="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="@android:color/holo_green_light"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
                 />
 
                <Button
@@ -117,9 +128,11 @@
                 android:id="@+id/btnTraceSos"
                 android:layout_alignParentBottom="true"
                 android:layout_toLeftOf="@id/btnUpdateSos"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
                 android:padding="5dp"
                 android:layout_marginRight="5dp"
-
+                android:layout_marginBottom="5dp"
                 />
 
         </RelativeLayout>

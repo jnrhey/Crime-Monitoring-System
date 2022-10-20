@@ -1,4 +1,5 @@
-﻿using Android.Views;
+﻿using Android.Graphics;
+using Android.Views;
 using Android.Widget;
 using AndroidX.RecyclerView.Widget;
 using Crime_Monitoring_Sys.GetSet;
@@ -39,7 +40,16 @@ namespace Crime_Monitoring_Sys.Adapters
             holder.compDesc.Text = comp_Records_s[position].comp_desc;
             holder.compType.Text = comp_Records_s[position].type_of_comp;
             holder.time_stamp.Text = comp_Records_s[position].time_stamp;
-            holder.comp_stat.Text = comp_Records_s[position].comp_stat;
+            if (comp_Records_s[position].comp_stat == "Active")
+            {
+                holder.comp_stat.Text = "Active";
+                holder.comp_stat.SetTextColor(Color.ParseColor("#FFBF00"));
+            }
+            else if (comp_Records_s[position].comp_stat != "Active")
+            {
+                holder.comp_stat.Text = "Solved";
+                holder.comp_stat.SetTextColor(Color.ParseColor("#51A944"));
+            }
         }
 
         public override int ItemCount => comp_Records_s.Count;
